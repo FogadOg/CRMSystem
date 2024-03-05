@@ -9,7 +9,15 @@
         }
 
         public function getAllContactPersons() {
-            echo "getContactPerson";
+            return array(
+                array(
+                    "email" => "email",
+                    "phonenumber" => "email",
+                    "name" => "name",
+                    "position" => "Position",
+                    "lærlingsbedrift_ID" => "lærlingsbedrift_ID",
+                )
+            );
         }
     }
 ?>
