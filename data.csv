@@ -1,0 +1,20 @@
+Email,Phone,Name,Position,Company,id
+pernille@example.com,+47 11223344,Pernille Larsen,Project Manager,Fjell & Fjord AS,0
+hans@example.com,+47 99887766,Hans Kristiansen,IT Director,Nordisk Teknologi,1
+inger@example.com,+47 55443322,Inger Solberg,Finance Manager,Oslo Invest,2
+erik@example.com,+47 12345678,Erik Johansen,Operations,Trondheim Gruppen,3
+anne@example.com,+47 87654321,Anne Nilsen,Product Manager,Bergen Solutions,4
+morten@example.com,+47 33221100,Morten Andersen,Sales Executive,Vestland Konsern,5
+sara@example.com,+47 11223399,Sara Olsen,Marketing,Sognefjord AS,6
+kjetil@example.com,+47 55443311,Kjetil Pedersen,HR Assistant,Lofoten Bedrift,7
+line@example.com,+47 99887755,Line Hansen,Accountant,Narvik Finans,8
+ivar@example.com,+47 22334455,Ivar Kristoffersen,Legal Advisor,Nordkapp Advokat,9
+lars@example.com,+47 66778899,Lars Jensen,Logistics Manager,Møre Transport,10
+ingrid@example.com,+47 33445566,Ingrid Berg,Business Analyst,Oslo Analytics,11
+marius@example.com,+47 77889900,Marius Pedersen,Procurement,Tromsø Sourcing,12
+ida@example.com,+47 11223388,Ida Andreassen,PR Manager,Finnmark Media,13
+sigrid@example.com,+47 99887744,Sigrid Svendsen,Customer Support,Haugesund Service,14
+olaug@example.com,+47 44556677,Olaug Olsen,Quality Control,Lillehammer Kvalitet,15
+johan@example.com,+47 33445588,Johan Johansen,Research Analyst,Voss Research,16
+elin@example.com,+47 11223377,Elin Hansen,Training Manager,Kristiansand Opplæring,17
+espen@example.com,+47 66778811,Espen Eriksen,Development Lead,Bodø Utvikling,18
