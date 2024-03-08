@@ -1,0 +1,21 @@
+INSERT INTO contactperson (Email, Phone, Name, Position, Company)
+VALUES
+('pernille@example.com', '+47 11223344', 'Pernille Larsen', 'Project Manager', 'Fjell & Fjord AS'),
+('hans@example.com', '+47 99887766', 'Hans Kristiansen', 'IT Director', 'Nordisk Teknologi'),
+('inger@example.com', '+47 55443322', 'Inger Solberg', 'Finance Manager', 'Oslo Invest'),
+('erik@example.com', '+47 12345678', 'Erik Johansen', 'Operations', 'Trondheim Gruppen'),
+('anne@example.com', '+47 87654321', 'Anne Nilsen', 'Product Manager', 'Bergen Solutions'),
+('morten@example.com', '+47 33221100', 'Morten Andersen', 'Sales Executive', 'Vestland Konsern'),
+('sara@example.com', '+47 11223399', 'Sara Olsen', 'Marketing', 'Sognefjord AS'),
+('kjetil@example.com', '+47 55443311', 'Kjetil Pedersen', 'HR Assistant', 'Lofoten Bedrift'),
+('line@example.com', '+47 99887755', 'Line Hansen', 'Accountant', 'Narvik Finans'),
+('ivar@example.com', '+47 22334455', 'Ivar Kristoffersen', 'Legal Advisor', 'Nordkapp Advokat'),
+('lars@example.com', '+47 66778899', 'Lars Jensen', 'Logistics Manager', 'Møre Transport'),
+('ingrid@example.com', '+47 33445566', 'Ingrid Berg', 'Business Analyst', 'Oslo Analytics'),
+('marius@example.com', '+47 77889900', 'Marius Pedersen', 'Procurement', 'Tromsø Sourcing'),
+('ida@example.com', '+47 11223388', 'Ida Andreassen', 'PR Manager', 'Finnmark Media'),
+('sigrid@example.com', '+47 99887744', 'Sigrid Svendsen', 'Customer Support', 'Haugesund Service'),
+('olaug@example.com', '+47 44556677', 'Olaug Olsen', 'Quality Control', 'Lillehammer Kvalitet'),
+('johan@example.com', '+47 33445588', 'Johan Johansen', 'Research Analyst', 'Voss Research'),
+('elin@example.com', '+47 11223377', 'Elin Hansen', 'Training Manager', 'Kristiansand Opplæring'),
+('espen@example.com', '+47 66778811', 'Espen Eriksen', 'Development Lead', 'Bodø Utvikling');
