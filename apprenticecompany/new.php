@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newCompany"])) {
     require "../connection.php";
     require "../components/sqlValidater.php";
 
-    $companyName = new SqlValidater($_POST["companyName"]).makeValid();
+    $companyName = $_POST["companyName"];
     $query = "INSERT INTO `apprenticecompany` (`Id`, `Name`) VALUES (NULL, '$companyName')";
     $result = $connection -> query($query);
 

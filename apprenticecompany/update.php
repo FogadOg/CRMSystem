@@ -3,7 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["updateCompany"])) {
     require "../connection.php";
 
-    $companyName = new SqlValidater($_POST["companyName"]).makeValid();
+    $companyName = $_POST["companyName"];
     $companyId = $_POST["companyId"];
 
     $query = "UPDATE apprenticecompany SET Name = '$companyName' WHERE id = '$companyId'";
