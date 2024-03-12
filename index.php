@@ -26,9 +26,11 @@
             <th>Company ID</th>
             <th>Name</th>
             <th>Contact Person</th>
+            <th>Actions</th>
         </tr>
 
         <?php
+            require "apprenticecompany/delete.php";
         foreach($companies as $company) {
             echo "<tr>";
             echo "<td>".$company["Id"]."</td>"; 
@@ -53,6 +55,7 @@
             echo "</div>
                 </div>
             </td>";
+            echo "<td>".deleteForm($company["Id"])."</td>";
             echo "</tr>";
         }?>
 

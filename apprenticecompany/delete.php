@@ -28,9 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["deleteCompany"])) {
     // Close the database connection
     $connection->close();
 }
-// Usage
+?>
 
-// <form method="post" action="./apprenticecompany/delete.php">
-//     <input type="hidden" name="companyId" value="2" >
-//     <input type="submit" name="deleteCompany" value="submit">
-// </form>
+<?php
+function deleteForm($companyId ){
+return "<form method='post' action='/apprenticecompany/delete.php'>
+            <input type='hidden' name='companyId' value='<?php echo $companyId; ?>' >
+            <input type='submit' name='deleteCompany' value='delete'>
+        </form>";
+}
+?>
