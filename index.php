@@ -25,6 +25,7 @@
         <tr>
             <th>Company ID</th>
             <th>Name</th>
+            <th>Contact Person</th>
         </tr>
 
         <?php
@@ -32,7 +33,26 @@
             echo "<tr>";
             echo "<td>".$company["Id"]."</td>"; 
             echo "<td>".$company["Name"]."</td>"; 
-            // echo "<td>".slettKnapp($annsatt["id"]).oppdaterKnapp($annsatt["id"])."</td>";
+            echo "<td>
+                <div class='dropdown'>
+                    <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton_".$company["Id"]."' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                        View
+                    </button>
+                    <div class='dropdown-menu' aria-labelledby='dropdownMenuButton_".$company["Id"]."'>";
+                        $contactPersonsQuery = "SELECT * FROM contactperson WHERE Lærlingsbedrift_ID = '".$company["Id"]."'";
+                        $contactPersonsResult = mysqli_query($connection, $contactPersonsQuery);
+                    
+                        if (mysqli_num_rows($contactPersonsResult) > 0) {
+                            while ($contactPerson = mysqli_fetch_assoc($contactPersonsResult)) {
+                                echo "<a class='dropdown-item' href='#'>".$contactPerson["Name"]."</a>";
+                            }
+                        } else {
+                            echo "<span class='dropdown-item'>No contact persons found</span>";
+                        }
+
+            echo "</div>
+                </div>
+            </td>";
             echo "</tr>";
         }?>
 
