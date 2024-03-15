@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newContact"])) {
     require "../connection.php";
-    require "../components/sqlValidater.php";
+    require "../components/sqlValidator.php";
 
     $contactEmail = $_POST["contactEmail"];
     $contactNumber = $_POST["contactNumber"];
