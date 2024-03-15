@@ -14,6 +14,6 @@ return "<form method='post' action='apprenticecompany/delete.php'>
 }
 
 function createForm(){
-    return "<a href='apprenticecompany/new.php' target='_blank' rel='noopener noreferrer'>New company</a>";
+    return "<a href='apprenticecompany/new.php'>New company</a>";
 }
 ?>
