@@ -14,11 +14,22 @@
     <?php
         require "connection.php";
         require "components/company.php";
+        require "apprenticecompany/forms.php";
+
         $company = new Company(1, "name");
 
         $query = "SELECT * FROM apprenticecompany";
         $result = $connection -> query($query);
-        $companies = $result -> fetch_all(MYSQLI_ASSOC);
+
+        $companies = [];
+        foreach ($result -> fetch_all(MYSQLI_ASSOC) as $company) {
+            $id = $company['Id'];
+            $name = $company['Name'];
+            
+            $company = new Company($id, $name);
+            $companies[] = $company;
+        }
+        
 
         $query = "SELECT * FROM contactperson";
         $result = $connection -> query($query);
@@ -34,35 +45,10 @@
         </tr>
 
         <?php
-        require "apprenticecompany/forms.php";
-        foreach($companies as $company) {
-            echo "<tr>";
-            echo "<td>".$company["Id"]."</td>"; 
-            echo "<td>".$company["Name"]."</td>"; 
-            echo "<td>
-                <div class='dropdown'>
-                    <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton_".$company["Id"]."' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                        View
-                    </button>
-                    <div class='dropdown-menu' aria-labelledby='dropdownMenuButton_".$company["Id"]."'>";
-                        $contactPersonsQuery = "SELECT * FROM contactperson WHERE Lærlingsbedrift_ID = '".$company["Id"]."'";
-                        $contactPersonsResult = mysqli_query($connection, $contactPersonsQuery);
-                    
-                        if (mysqli_num_rows($contactPersonsResult) > 0) {
-                            while ($contactPerson = mysqli_fetch_assoc($contactPersonsResult)) {
-                                echo "<a class='dropdown-item' href='#'>".$contactPerson["Name"]."</a>";
-                            }
-                        } else {
-                            echo "<span class='dropdown-item'>No contact persons found</span>";
-                        }
-
-            echo "</div>
-                </div>
-            </td>";
-            echo "<td>".deleteForm($company["Id"]);
-            echo updateForm($company["Id"])."</td>";
-            echo "</tr>";
-        }?>
+            foreach($companies as $company) {
+                $company -> render();
+            }
+        ?>
 
     </table>
 
