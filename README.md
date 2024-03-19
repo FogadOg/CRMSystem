@@ -15,12 +15,15 @@ Et crm system for lærling bedrifter og kontakt personer
 * Lage connectetion.php
 * Lage figma fil
 * Lage prototype design i figma
+* CRUD bedrifter
+* CRUD kontakt personer
 
 ### Fogad:
 * Planleget
 * Lagde klasse for kontakt person 
 * Lagde klasse for lærlingbedrift
 * Lagde github repo
+* SQL validator, ikke noe sql injection
 
 ### Kacper:
 * Planleget
