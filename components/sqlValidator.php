@@ -2,17 +2,15 @@
     require "connection.php";
 
     class SqlValidator {
-        private $userInput;
+        private $query;
 
-        public function __construct(string $userInput) {
-            $this->conn = $conn;
-            $this->userInput = $userInput;
+        public function __construct(string $query) {
+            $this->query = $query;
         }
 
-        public function makeValid() {
-            // Use $this->conn instead of $conn
-            $stmt = $connection->prepare("SELECT * FROM apprenticecompany WHERE name = ?");
-            $stmt->bind_param("s", $this->userInput); // Also use $this->userInput
+        public function isValid(string $input = "") {
+            $stmt = $connection->prepare($this->query);
+            $stmt->bind_param("s", $input);
             $stmt->execute();
             $result = $stmt->get_result();
 
