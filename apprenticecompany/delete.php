@@ -27,6 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["deleteCompany"])) {
 
     // Close the database connection
     $connection->close();
+} else{
+    header("Location: ../index.php");
+    exit();
 }
 
 
