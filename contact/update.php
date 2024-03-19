@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
     <br>
 
     <label for='contactCompany'>Contact company:</label>
-    <select name='contactCompany'>";
+    <select name='contactCompany' id='contactCompany'>";
 
             require "../connection.php";
             $query = "SELECT * FROM apprenticecompany";

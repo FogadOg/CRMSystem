@@ -42,8 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newContact"])) {
     <br>
 
     <label for="contactCompany">Contact company:</label>
-    <select name="contactCompany">
-
+    <select name='contactCompany' id='contactCompany'>";
         <?php
             require "../connection.php";
             $query = "SELECT * FROM apprenticecompany";
