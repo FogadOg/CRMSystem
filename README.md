@@ -30,6 +30,7 @@ Et crm system for lærling bedrifter og kontakt personer
 * Laget database
 
 ## Fremtids plan:
+* Poststed og kode for bedrifter
 * Logge inn, kun admin kan redigrere side
 * Søke filterer
 
