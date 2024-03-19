@@ -2,7 +2,6 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newCompany"])) {
     require "../connection.php";
-    require "../components/sqlValidator.php";
 
     $companyName = $_POST["companyName"];
     $query = "INSERT INTO `apprenticecompany` (`Id`, `Name`) VALUES (NULL, '$companyName')";
