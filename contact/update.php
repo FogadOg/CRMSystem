@@ -79,7 +79,21 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
     <br>
 
     <label for='contactCompany'>Contact company:</label>
-    <input type='text' id='contactCompany' name='contactCompany' value=".$contactCompany." required>
+    <select name='contactCompany'>";
+
+            require "../connection.php";
+            $query = "SELECT * FROM apprenticecompany";
+            $result = mysqli_query($connection, $query);
+            $companies = $result -> fetch_all(MYSQLI_ASSOC);
+            foreach($companies as $company) {
+                if ($contactCompany == $company["Id"]) {
+                    echo "<option value=".$company["Id"]." selected>".$company["Name"]."</option>";
+                }else{
+                    echo "<option value=".$company["Id"].">".$company["Name"]."</option>";
+                }
+            }
+
+    echo "</select> 
     <br>
 
     <input type='submit' name='updateContact'>
