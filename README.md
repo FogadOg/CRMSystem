@@ -31,6 +31,7 @@ Et crm system for lærling bedrifter og kontakt personer
 
 ## Fremtids plan:
 * Poststed og kode for bedrifter
+* SQL validator
 * Logge inn, kun admin kan redigrere side
 * Søke filterer
 
