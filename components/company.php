@@ -1,4 +1,5 @@
 <?php
+
     class Company {
         public int $companyId;
         public string $companyName;
@@ -8,17 +9,15 @@
             $this->companyName = $companyName;
         }
 
-        public function getAllContactPersons() {
-            return array(
-                array(
-                    "email" => "email",
-                    "phonenumber" => "email",
-                    "name" => "name",
-                    "position" => "Position",
-                    "lærlingsbedrift_ID" => "lærlingsbedrift_ID",
-                )
-            );
-        }
+        public function render() {
+            echo "<tr>";
+            echo "<td>".$this -> companyId."</td>"; 
+            echo "<td>".$this -> companyName."</td>"; 
+            echo "<td>View</td>";
+            echo "<td>".deleteForm($this -> companyId);
+            echo updateForm($this -> companyId)."</td>";
+            echo "</tr>";
+    }
 
     }
 ?>
