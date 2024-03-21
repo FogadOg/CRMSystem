@@ -14,9 +14,11 @@
     <?php
         require "connection.php";
         require "components/company.php";
+        require "components/contactPerson.php";
         require "apprenticecompany/forms.php";
 
-        $company = new Company(1, "name");
+        $companyFilter = $_GET["company"];
+
 
         $query = "SELECT * FROM apprenticecompany";
         $result = $connection -> query($query);
@@ -69,18 +71,16 @@
         require "contact/forms.php";
 
         foreach($contactPersons as $contactPerson) {
-            echo "<tr>";
-            echo "<td>".$contactPerson["Id"]."</td>"; 
-            echo "<td>".$contactPerson["Email"]."</td>"; 
-            echo "<td>".$contactPerson["Phonenumber"]."</td>"; 
-            echo "<td>".$contactPerson["Position"]."</td>"; 
-            echo "<td>".$contactPerson["Name"]."</td>"; 
-            echo "<td>".$contactPerson["Lærlingsbedrift_ID"]."</td>"; 
+            $id = $contactPerson["Id"]; 
+            $email = $contactPerson["Email"]; 
+            $phonenumber = $contactPerson["Phonenumber"]; 
+            $position = $contactPerson["Position"]; 
+            $name = $contactPerson["Name"]; 
+            $companyId = $contactPerson["Lærlingsbedrift_ID"]; 
 
-            echo "<td>".contactDeleteForm($contactPerson["Id"]);
-            echo contactUpdateForm($contactPerson["Id"])."</td>";
+            $contactPerson = new ContactPerson($id, $email, $phonenumber, $position, $name, $companyId);
+            $contactPerson -> render($companyFilter);
 
-            echo "</tr>";
         }?>
 
     </table>
