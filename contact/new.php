@@ -42,7 +42,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newContact"])) {
     <br>
 
     <label for="contactCompany">Contact company:</label>
-    <input type="text" id="contactCompany" name="contactCompany" required>
+    <select name='contactCompany' id='contactCompany'>";
+        <?php
+            require "../connection.php";
+            $query = "SELECT * FROM apprenticecompany";
+            $result = mysqli_query($connection, $query);
+            $companies = $result -> fetch_all(MYSQLI_ASSOC);
+            foreach($companies as $company) {
+                echo "<option value=".$company["Id"].">".$company["Name"]."</option>";
+            }
+        ?>
+    </select>
     <br>
 
     <input type="submit" name="newContact">

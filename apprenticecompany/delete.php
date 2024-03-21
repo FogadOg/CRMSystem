@@ -13,9 +13,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["deleteCompany"])) {
         echo "Company not found with id: ".$companyId;
         exit();
     }
+    
+    $query = "DELETE FROM contactperson WHERE Lærlingsbedrift_ID = $companyId";
+    $result = $connection -> query($query);
+
+    if (!$result) {
+        echo "Error: " . $query . "<br>" . $connection->error;
+    }
 
     $query = "DELETE FROM apprenticecompany WHERE id = '$companyId'";
-
     $result = $connection -> query($query);
 
     if ($result) {
