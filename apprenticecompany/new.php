@@ -20,10 +20,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newCompany"])) {
 }
 ?>
 
-<form method="post">
-    <h1>Create new company</h1>
-    <label for="companyName">Company Name:</label>
-    <input type="text" id="companyName" name="companyName" required>
-    <br>
-    <input type="submit" name="newCompany">
-</form>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+    .formContainer{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .formContainer form{
+        width: 30%;
+    }
+</style>
+
+<div class="formContainer">
+    <form method="post">
+      <h1>Leg til bedrift</h1>
+    
+      <div class="form-group">
+        <label for="companyName">Bedrift navn</label>
+        <input type="text" class="form-control" id="companyName" name="companyName" required>
+      </div>
+      
+    
+      
+      <input class="btn btn-primary" value="Ferdig" type="submit" name="newCompany">
+    </form>
+</div>
+
+
