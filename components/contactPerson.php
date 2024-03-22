@@ -36,6 +36,19 @@
                 };
                 return;
             };
+            echo "<tr>";
+            
+            echo "<td>".$this -> contectPersonId."</td>"; 
+            echo "<td>".$this -> email."</td>"; 
+            echo "<td>".$this -> phoneNumber."</td>"; 
+            echo "<td>".$this -> name."</td>"; 
+            echo "<td>".$this -> position."</td>"; 
+            echo "<td>".$this -> comapnyId."</td>"; 
+
+            echo "<td>".contactDeleteForm($this -> contectPersonId);
+            echo contactUpdateForm($this -> contectPersonId)."</td>";
+
+            echo "</tr>";
         }
 
         private function getCompanyName($id){
