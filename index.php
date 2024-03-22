@@ -17,8 +17,11 @@
         require "components/contactPerson.php";
         require "apprenticecompany/forms.php";
 
-        $companyFilter = $_GET["company"];
-
+        if (isset($_GET["company"])) {
+            $companyFilter = $_GET["company"];
+        } else {
+            $companyFilter = "";
+        }
 
         $query = "SELECT * FROM apprenticecompany";
         $result = $connection -> query($query);
