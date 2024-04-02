@@ -17,5 +17,5 @@ VALUES
 ('sigrid@example.com', '+47 99887744', 'Sigrid Svendsen', 'Customer Support', 'Haugesund Service'),
 ('olaug@example.com', '+47 44556677', 'Olaug Olsen', 'Quality Control', 'Lillehammer Kvalitet'),
 ('johan@example.com', '+47 33445588', 'Johan Johansen', 'Research Analyst', 'Voss Research'),
-('elin@example.com', '+47 11223377', 'Elin Hansen', 'Training Manager', 'Kristiansand Opplæring'),
+('elin@example.com', '+47 11223377', 'Elin Hansen', 'Training Manager', 'Kristiansand Opplaering'),
 ('espen@example.com', '+47 66778811', 'Espen Eriksen', 'Development Lead', 'Bodø Utvikling');

@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lærling bedrifter</title>
+    <title>Laerling bedrifter</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 
-    <h1>Lærling Bedrift</h1>
+    <h1>Laerling Bedrift</h1>
+    <h1>Jeg skjønner ingenting!</h1>
 
     <?php
         require "connection.php";
@@ -80,7 +81,7 @@
             $phonenumber = $contactPerson["Phonenumber"]; 
             $position = $contactPerson["Position"]; 
             $name = $contactPerson["Name"]; 
-            $companyId = $contactPerson["Lærlingsbedrift_ID"]; 
+            $companyId = $contactPerson["Laerlingsbedrift_ID"]; 
 
             $contactPerson = new ContactPerson($id, $email, $phonenumber, $position, $name, $companyId);
             $contactPerson -> render($companyFilter);

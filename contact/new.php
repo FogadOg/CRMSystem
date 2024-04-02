@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newContact"])) {
     $contactPosition = $_POST["contactPosition"];
     $contactCompany = $_POST["contactCompany"];
 
-    $query = "INSERT INTO `contactperson` (`Id`, `Email`, `Phonenumber`, `Name`, `Position`, `Lærlingsbedrift_ID`) VALUES (NULL, '$contactEmail', '$contactNumber', '$contactName', '$contactPosition', '$contactCompany')";
+    $query = "INSERT INTO `contactperson` (`Id`, `Email`, `Phonenumber`, `Name`, `Position`, `Laerlingsbedrift_ID`) VALUES (NULL, '$contactEmail', '$contactNumber', '$contactName', '$contactPosition', '$contactCompany')";
     $result = $connection -> query($query);
 
     if ($result === TRUE) {

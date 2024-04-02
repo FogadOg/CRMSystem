@@ -1,10 +1,10 @@
 # CRM system gruppe 3
-Et crm system for lærling bedrifter og kontakt personer
+Et crm system for laerling bedrifter og kontakt personer
 
 ## Funksjoner:
 * CRUD kontakt person
-* CRUD lærlingbedrift
-* En til mange relasjon mellom lærlingsbedrift og kontakt personene
+* CRUD laerlingbedrift
+* En til mange relasjon mellom laerlingsbedrift og kontakt personene
 * Kunne få kontakt personene til en spessefik bedrift
 
 ## Arbeids fordeling:
@@ -21,7 +21,7 @@ Et crm system for lærling bedrifter og kontakt personer
 ### Fogad:
 * Planleget
 * Lagde klasse for kontakt person 
-* Lagde klasse for lærlingbedrift
+* Lagde klasse for laerlingbedrift
 * Lagde github repo
 * SQL validator, ikke noe sql injection
 

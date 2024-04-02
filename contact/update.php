@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["updateContact"])) {
     $contactPosition = $contactPerson["contactPosition"];
     $contactCompany = $contactPerson["contactCompany"];
 
-    $query = "UPDATE contactperson SET Email = '$companyEmail', Phonenumber = '$contactNumber', Name = '$contactName', Position = '$contactPosition', Lærlingsbedrift_ID = 'contactCompany' WHERE id = '$companyId'";
+    $query = "UPDATE contactperson SET Email = '$companyEmail', Phonenumber = '$contactNumber', Name = '$contactName', Position = '$contactPosition', Laerlingsbedrift_ID = 'contactCompany' WHERE id = '$companyId'";
 
     $result = $connection -> query($query);
 
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
     $contactNumber = $contactPerson["Phonenumber"];
     $contactName = $contactPerson["Name"];
     $contactPosition = $contactPerson["Position"];
-    $contactCompany = $contactPerson["Lærlingsbedrift_ID"];
+    $contactCompany = $contactPerson["Laerlingsbedrift_ID"];
 
     echo "
     <form method='post'>

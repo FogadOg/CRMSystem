@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["deleteCompany"])) {
         exit();
     }
     
-    $query = "DELETE FROM contactperson WHERE Lærlingsbedrift_ID = $companyId";
+    $query = "DELETE FROM contactperson WHERE Laerlingsbedrift_ID = $companyId";
     $result = $connection -> query($query);
 
     if (!$result) {
