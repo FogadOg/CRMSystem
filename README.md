@@ -28,6 +28,7 @@ Et crm system for lærling bedrifter og kontakt personer
 ### Kacper:
 * Planleget
 * Laget database
+* Laget Filter
 
 ## Fremtids plan:
 * Poststed og kode for bedrifter
