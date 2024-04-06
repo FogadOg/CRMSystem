@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["deleteContact"])) {
 
     $contactId = $_POST["contactId"];
     // Checking if id exits
-    $checkQuery = "SELECT * FROM contactperson WHERE id = $contactId";
+    $checkQuery = "SELECT * FROM ContactPerson WHERE id = $contactId";
     $result = $connection->query($checkQuery);
     $contactPerson = $result -> fetch_assoc();
 
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["deleteContact"])) {
         exit();
     }
 
-    $query = "DELETE FROM contactperson WHERE id = '$contactId'";
+    $query = "DELETE FROM ContactPerson WHERE id = '$contactId'";
 
     $result = $connection -> query($query);
 

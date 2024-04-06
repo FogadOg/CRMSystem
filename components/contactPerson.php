@@ -70,7 +70,7 @@
         private function getCompanyName($id){
             require "connection.php";
 
-            $query = "SELECT * FROM apprenticecompany WHERE id = $id";
+            $query = "SELECT * FROM ApprenticeCompany WHERE id = $id";
             $result = $connection -> query($query);
             
 

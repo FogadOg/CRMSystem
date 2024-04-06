@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
     require "../connection.php";
 
     $contactId = $_GET['id'];
-    $query = "SELECT * FROM contactperson WHERE id = '$contactId'";
+    $query = "SELECT * FROM ContactPerson WHERE id = '$contactId'";
     $result = $connection -> query($query);
 
     //? Trenger vi denne? Kun for sql skrive feil
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
     <select name='contactCompany' id='contactCompany'>";
 
             require "../connection.php";
-            $query = "SELECT * FROM apprenticecompany";
+            $query = "SELECT * FROM ApprenticeCompany";
             $result = mysqli_query($connection, $query);
             $companies = $result -> fetch_all(MYSQLI_ASSOC);
             foreach($companies as $company) {

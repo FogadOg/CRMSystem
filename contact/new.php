@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newContact"])) {
     $contactPosition = $_POST["contactPosition"];
     $contactCompany = $_POST["contactCompany"];
 
-    $query = "INSERT INTO `contactperson` (`Id`, `Email`, `Phonenumber`, `Name`, `Position`, `Laerlingsbedrift_ID`) VALUES (NULL, '$contactEmail', '$contactNumber', '$contactName', '$contactPosition', '$contactCompany')";
+    $query = "INSERT INTO `ContactPerson` (`Id`, `Email`, `Phonenumber`, `Name`, `Position`, `Laerlingsbedrift_ID`) VALUES (NULL, '$contactEmail', '$contactNumber', '$contactName', '$contactPosition', '$contactCompany')";
     $result = $connection -> query($query);
 
     if ($result === TRUE) {
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newContact"])) {
         <select name='contactCompany' id='contactCompany'>";
             <?php
                 require "../connection.php";
-                $query = "SELECT * FROM apprenticecompany";
+                $query = "SELECT * FROM ApprenticeCompany";
                 $result = mysqli_query($connection, $query);
                 $companies = $result -> fetch_all(MYSQLI_ASSOC);
                 foreach($companies as $company) {

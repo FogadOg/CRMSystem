@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["deleteCompany"])) {
 
     $companyId = $_POST["companyId"];
     // Checking if id exits
-    $checkQuery = "SELECT * FROM apprenticecompany WHERE id = $companyId";
+    $checkQuery = "SELECT * FROM ApprenticeCompany WHERE id = $companyId";
     $result = $connection->query($checkQuery);
     $company = $result -> fetch_assoc();
 
@@ -14,14 +14,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["deleteCompany"])) {
         exit();
     }
     
-    $query = "DELETE FROM contactperson WHERE Laerlingsbedrift_ID = $companyId";
+    $query = "DELETE FROM ContactPerson WHERE Laerlingsbedrift_ID = $companyId";
     $result = $connection -> query($query);
 
     if (!$result) {
         echo "Error: " . $query . "<br>" . $connection->error;
     }
 
-    $query = "DELETE FROM apprenticecompany WHERE id = '$companyId'";
+    $query = "DELETE FROM ApprenticeCompany WHERE id = '$companyId'";
     $result = $connection -> query($query);
 
     if ($result) {
