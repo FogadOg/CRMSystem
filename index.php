@@ -25,10 +25,12 @@
             $companyFilter = "";
         }
 
-        $query = "SELECT * FROM apprenticecompany";
+        $query = "SELECT * FROM ApprenticeCompany";
         $result = $connection -> query($query);
-
         $companies = [];
+
+        error_reporting(E_ALL);
+        ini_set('display_errors', 1);
         foreach ($result -> fetch_all(MYSQLI_ASSOC) as $company) {
             $id = $company['Id'];
             $name = $company['Name'];
@@ -36,9 +38,8 @@
             $company = new Company($id, $name);
             $companies[] = $company;
         }
-        
 
-        $query = "SELECT * FROM contactperson";
+        $query = "SELECT * FROM ContactPerson";
         $result = $connection -> query($query);
         $contactPersons = $result -> fetch_all(MYSQLI_ASSOC);
 
@@ -82,7 +83,6 @@
             $position = $contactPerson["Position"]; 
             $name = $contactPerson["Name"]; 
             $companyId = $contactPerson["Laerlingsbedrift_ID"]; 
-
             $contactPerson = new ContactPerson($id, $email, $phonenumber, $position, $name, $companyId);
             $contactPerson -> render($companyFilter);
 
