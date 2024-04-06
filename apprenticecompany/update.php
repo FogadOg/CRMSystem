@@ -49,14 +49,32 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
 
     $companyName = $company["Name"];
 
-    echo "<form method='post'>
+    echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">';
+    echo '
+    <style>
+        .formContainer{
+            width: 100%;
+            height: 100%;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .formContainer form{
+            width: 30%;
+        }
+    </style>';
+    echo "
+    <div class='formContainer'>
+    <form method='post'>
         <h1>Update company</h1>
         <input type='hidden' name='companyId' value=".$companyId.">
         <label for='companyName'>Company Name:</label>
-        <input type='text' id='companyName' name='companyName' value=".$companyName." required>
+        <input type='text' class='form-control' id='companyName' name='companyName' value=".$companyName." required>
         <br>
-        <input type='submit' name='updateCompany'>
-        </form>";
+        <input class='btn btn-primary' type='submit' name='updateCompany'>
+        </form>
+        </div>";
 }
 
 
