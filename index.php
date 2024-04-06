@@ -11,7 +11,6 @@
 <body>
 
     <h1>Laerling Bedrift</h1>
-    <h1>Jeg skjønner ingenting!</h1>
 
     <?php
         require "connection.php";
