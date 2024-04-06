@@ -35,7 +35,7 @@
         public function render($filterCompany = ""){
 
             if($filterCompany != ""){
-                if($filterCompany == $this -> getCompanyName($this -> comapnyId)){
+                if($filterCompany == $this -> comapnyId){
                     echo "<tr>";
                     echo "<td>".$this -> contectPersonId."</td>"; 
                     echo "<td>".$this -> email."</td>"; 
