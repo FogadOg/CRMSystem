@@ -14,7 +14,7 @@ class Company {
         <script>
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
-            const companyName = "'.$this->companyName.'";
+            const companyName = "'.$this->companyId.'";
             const button = document.getElementById("button_'.$this->companyId.'");
             if (urlParams.get("company") === companyName) {
                 button.classList.add("selected");
@@ -34,7 +34,7 @@ class Company {
         echo "<tr>";
         echo "<td>".$this->companyId."</td>"; 
         echo "<td>".$this->companyName."</td>"; 
-        echo "<td><button class='btn btn-primary' id='button_".$this->companyId."' onclick='toggleFilter(\"".$this->companyName."\")'>Toggle</button></td>";
+        echo "<td><button class='btn btn-primary' id='button_".$this->companyId."' onclick='toggleFilter(\"".$this->companyId."\")'>Toggle</button></td>";
         echo "<td>".deleteForm($this->companyId);
         echo updateForm($this->companyId)."</td>";
         echo "</tr>";
