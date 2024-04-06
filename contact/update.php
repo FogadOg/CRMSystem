@@ -56,26 +56,43 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
     $contactPosition = $contactPerson["Position"];
     $contactCompany = $contactPerson["Laerlingsbedrift_ID"];
 
+
+    echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">';
+    echo '
+    <style>
+        .formContainer{
+            width: 100%;
+            height: 100%;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .formContainer form{
+            width: 30%;
+        }
+    </style>';
     echo "
+    <div class='formContainer'>
     <form method='post'>
 
     <h1>Update contact</h1>
     <input type='hidden' name='companyId' value=".$contactId.">
 
     <label for='contactEmail'>Contact email:</label>
-    <input type='text' id='contactEmail' name='contactEmail' value=".$contactEmail." required>
+    <input type='text' class='form-control' id='contactEmail' name='contactEmail' value=".$contactEmail." required>
     <br>
 
     <label for='contactNumber'>Contact phone number:</label>
-    <input type='text' id='contactNumber' name='contactNumber' value=".$contactNumber." required max='12'>
+    <input type='text' class='form-control' id='contactNumber' name='contactNumber' value=".$contactNumber." required max='12'>
     <br>
 
     <label for='contactName'>Contact name:</label>
-    <input type='text' id='contactName' name='contactName' value=".$contactName." required>
+    <input type='text' class='form-control' id='contactName' name='contactName' value=".$contactName." required>
     <br>
 
     <label for='contactPosition'>Contact position:</label>
-    <input type='text' id='contactPosition' name='contactPosition' value=".$contactPosition." required>
+    <input type='text' class='form-control' id='contactPosition' name='contactPosition' value=".$contactPosition." required>
     <br>
 
     <label for='contactCompany'>Contact company:</label>
@@ -96,9 +113,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
     echo "</select> 
     <br>
 
-    <input type='submit' name='updateContact'>
+    <input type='submit' class='btn btn-primary' name='updateContact'>
     
-    </form>";
+    </form>
+    </div>";
 
 }
 
