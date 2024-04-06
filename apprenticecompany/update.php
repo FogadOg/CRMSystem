@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["updateCompany"])) {
     $companyName = $_POST["companyName"];
     $companyId = $_POST["companyId"];
 
-    $query = "UPDATE apprenticecompany SET Name = '$companyName' WHERE id = '$companyId'";
+    $query = "UPDATE ApprenticeCompany SET Name = '$companyName' WHERE id = '$companyId'";
 
     $result = $connection -> query($query);
 
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
     require "../connection.php";
 
     $companyId = $_GET['id'];
-    $query = "SELECT * FROM apprenticecompany WHERE id = '$companyId'";
+    $query = "SELECT * FROM ApprenticeCompany WHERE id = '$companyId'";
     $result = $connection -> query($query);
 
     //? Trenger vi denne? Kun for sql skrive feil

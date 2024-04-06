@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newCompany"])) {
     require "../connection.php";
 
     $companyName = $_POST["companyName"];
-    $query = "INSERT INTO `apprenticecompany` (`Id`, `Name`) VALUES (NULL, '$companyName')";
+    $query = "INSERT INTO `ApprenticeCompany` (`Id`, `Name`) VALUES (NULL, '$companyName')";
     $result = $connection -> query($query);
 
     if ($result === TRUE) {
