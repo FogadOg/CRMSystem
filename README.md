@@ -1,7 +1,7 @@
 # CRM system gruppe 3
 Et crm system for laerling bedrifter og kontakt personer
 
-## Funksjoner:
+## Krav spesikasjon:
 * CRUD kontakt person
 * CRUD laerlingbedrift
 * En til mange relasjon mellom laerlingsbedrift og kontakt personene
@@ -23,12 +23,12 @@ Et crm system for laerling bedrifter og kontakt personer
 * Lagde klasse for kontakt person 
 * Lagde klasse for laerlingbedrift
 * Lagde github repo
-* SQL validator, ikke noe sql injection
+* Laget filter kontakt personer
 
 ### Kacper:
 * Planleget
 * Laget database
-* Laget Filter
+* Laget filter kontakt personer
 
 ## Fremtids plan:
 * Poststed og kode for bedrifter
